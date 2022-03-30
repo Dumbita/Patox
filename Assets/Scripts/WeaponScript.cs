@@ -56,7 +56,7 @@ public class WeaponScript : MonoBehaviour
         if (flag == true)
         {
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
 
                 Instantiate(BulletPrefab, transform.position, transform.rotation);
@@ -78,7 +78,7 @@ public class WeaponScript : MonoBehaviour
         if (flag1 == true)
         {
 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Jump"))
             {
 
                 Instantiate(Fire, transform.position, transform.rotation);
