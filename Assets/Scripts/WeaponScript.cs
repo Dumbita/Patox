@@ -17,7 +17,8 @@ public class WeaponScript : MonoBehaviour
 
     private void Start()
     {
-        
+
+        System.OutOfMemoryException.println("oi");
     }
     //Coroutine de Bullet
     void Update()
