@@ -18,7 +18,8 @@ public class WeaponScript : MonoBehaviour
     private void Start()
     {
 
-        System.OutOfMemoryException.println("oi");
+        print("oi");
+        
     }
     //Coroutine de Bullet
     void Update()
@@ -46,7 +47,7 @@ public class WeaponScript : MonoBehaviour
                  if (hitpoint.collider.gameObject.GetComponent<Enemy>() != null)
                  {
                      Vector3 distanciaTarget = hitpoint.point - transform.position;
-                     Vector3 direção = distanciaTarget.normalized;
+                     Vector3 direÃ§Ã£o = distanciaTarget.normalized;
                      Instantiate(BulletPrefab, transform.position, transform.rotation);
                  }
         }
