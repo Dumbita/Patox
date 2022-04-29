@@ -7,7 +7,7 @@ public class AiMovement : MonoBehaviour
 
     public float speed;
 
-    public GameObject player; 
+    GameObject player;
 
     void Start()
     {
@@ -19,6 +19,8 @@ public class AiMovement : MonoBehaviour
     {
         //rotates fast
         //transform.LookAt(player.transform);
+
+        player = GameObject.FindGameObjectWithTag("Player");
 
         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
