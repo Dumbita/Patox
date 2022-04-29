@@ -24,6 +24,7 @@ public class AiMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         distance = Vector3.Distance(transform.position, player.transform.position);
+
         if (distance > 1f)
         {
 
