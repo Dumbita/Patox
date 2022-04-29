@@ -6,6 +6,7 @@ public class AiMovement : MonoBehaviour
 {
 
     public float speed;
+    float distance;
 
     GameObject player;
 
@@ -22,10 +23,16 @@ public class AiMovement : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+        distance = Vector3.Distance(transform.position, player.transform.position);
+        if (distance > 1f)
+        {
 
-        transform.position += transform.forward * speed * Time.deltaTime;
+            Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+
+            transform.position += transform.forward * speed * Time.deltaTime;
+
+        }
 
     }
 
