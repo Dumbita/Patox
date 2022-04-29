@@ -39,6 +39,8 @@ public class Spawner : MonoBehaviour
 
         Creator = Instantiate(Inimigo);
 
+        Destroy(Creator, 10f);
+
         yield return new WaitForSeconds(i);
 
         StartCoroutine(EnemyCreator(i));
