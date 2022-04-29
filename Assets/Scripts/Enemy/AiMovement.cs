@@ -10,9 +10,12 @@ public class AiMovement : MonoBehaviour
 
     GameObject player;
 
+    Animator animator;
+
     void Start()
     {
-        
+
+        animator = GetComponent<Animator>();
 
     }
 
@@ -25,13 +28,21 @@ public class AiMovement : MonoBehaviour
 
         distance = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distance > 1f)
+        if (distance > 2f)
         {
+
+            animator.SetBool("Run Forward", true);
 
             Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
 
             transform.position += transform.forward * speed * Time.deltaTime;
+
+        }
+        else
+        {
+
+            animator.SetBool("Run Forward", false);
 
         }
 
