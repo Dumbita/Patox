@@ -762,6 +762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 8633237642842920158, guid: 09fdd4fe8849ab84392e2574dbaa8640, type: 3}
+      propertyPath: Inimigo
+      value: 
+      objectReference: {fileID: 100026, guid: 22c558cc2c706a14bbe118990e250dc3, type: 3}
     - target: {fileID: 8633237642842920159, guid: 09fdd4fe8849ab84392e2574dbaa8640, type: 3}
       propertyPath: m_RootOrder
       value: 4
