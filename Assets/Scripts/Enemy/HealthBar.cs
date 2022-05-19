@@ -35,5 +35,12 @@ public class HealthBar : MonoBehaviour
 
         j++;
 
+        if (j < a.Length)
+        {
+
+            StartCoroutine(Timer(t));
+
+        }
+
     }
 }
