@@ -23,7 +23,9 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        
+
+        transform.LookAt(Camera.main.transform.position);
+
     }
 
     IEnumerator Timer(float t)
