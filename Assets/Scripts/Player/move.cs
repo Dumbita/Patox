@@ -21,5 +21,18 @@ public class move : MonoBehaviour
         float b = Input.GetAxisRaw("Vertical") * speed * Time.deltaTime;
         transform.Translate(a,0.0f,b);
 
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+
+            transform.Rotate(Vector3.up * speed* 10 * Time.deltaTime);
+
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+
+            transform.Rotate(Vector3.down * speed * 10 * Time.deltaTime);
+
+        }
     }
 }
